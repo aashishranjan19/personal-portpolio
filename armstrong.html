@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+<head>
+<style> body{
+
+padding-top : 100px;
+margin-top :100px;
+background-color :lightpink;
+}
+div {
+background-color :tomato;
+
+width :1000px;
+text-align :center;
+border : 15px solid green;
+padding:50px;
+margin :10px;
+
+}
+button{
+background-color :red;
+ color : green;
+ }
+input {
+background-color :skyblue;
+}
+</style>
+<title>armstrong</title>
+</head>
+<body>
+<div>
+<h2 style="color :green;" > checking <i> "Number is ARMSRONG "</i> :---</h2>
+<input id="typ" type="text"><br><br>
+
+<button type="button" onclick="func()"> check</button>
+<p id="msg"  style=color:orange></p>
+</div>
+<script>
+
+function func()
+{
+var num=document.getElementById("typ").value;
+let temp=num;
+var sum=0;
+let result;
+let powr=num.length;
+while (num>0)
+{
+
+var rem=num % 10;
+pow=rem**powr;
+sum +=pow;
+
+num=num/10;
+num=Math.trunc(num);
+}
+if (sum==temp)
+{
+result=" yeah!!!!!<b>ARMSTRONG<b>!!!!!! "+ "<br>"+temp;
+}
+else
+{
+result="<b>opppss!!!!! </b>"+ "<br>"+temp;
+}
+document.getElementById("msg").innerHTML=result;
+}
+</script>
+
+</body>
+<html>
